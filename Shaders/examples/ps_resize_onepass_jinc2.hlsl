@@ -98,7 +98,7 @@ float4 main(PS_INPUT input) : SV_Target
     float3 max_sample = max4(c11, c21, c12, c22);
 
     // Anti-ringing
-   // color = lerp(color, clamp(color, min_sample, max_sample), JINC2_AR_STRENGTH);
+    color = lerp(color, clamp(color, min_sample, max_sample), JINC2_AR_STRENGTH);
 
     return float4(color, 1);
 }
